@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+  :root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --header-bg: #f0f0f0;
+    --nav-bg: #e0e0e0;
+  }
+
+  body.dark-theme {
+    --bg-color: #1e1e1e;
+    --text-color: #ffffff;
+    --header-bg: #333333;
+    --nav-bg: #444444;
+  }
+
+  nav {
+    background-color: var(--nav-bg);
+    padding: 1rem 2rem;
+  }
+
+  header {
+    font-size: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--header-bg);
+  }
+
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+</style>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TImeline App</title>
+</head>
+
+<body>
+  <header>
+    <div id="logo">Timeline App</div>
+  </header>
+
+  <nav>
+    <div class="container" id="filters">
+      <!-- Filters will be added here in future -->
+      <a href="#">Home</a>
+      <a href="#">Events</a>
+      <a href="#">About</a>
+    </div>
+    <button id="button"> Toggle Theme</button>
+  </nav>
+
+  <main>
+    <p>This is the main tag</p>
+    <section id="timeline">
+      <p>this is the section tag with id = timeline</p>
+      <article class="timeline-event">
+        <p>this is the article tag with id = timeline-event</p>
+        <p>Short event details here.</p>
+      </article>
+    </section>
+  </main>
+
+  <div id="modal">
+
+  </div>
+
+  <script>
+    const button = document.getElementById('button');
+    button.addEventListener('click', () => {
+      document.body.classList.toggle('dark-theme');
+    });
+  </script>
+
+</body>
+
+</html>
